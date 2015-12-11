@@ -2,12 +2,11 @@
 
 Name:          rubygem-%{gem_name}
 Version:       0.0.2
-Release:       1%{?dist}
-Summary:    A pure Ruby API to the NIfTI Neuroimaging Format
-Group: Development/Languages
-License:      LGPLv3
+Release:       2%{?dist}
+Summary:       A pure Ruby API to the NIfTI Neuroimaging Format
+License:       LGPLv3+
 URL:           https://github.com/brainmap/%{gem_name}
-Source0:    https://rubygems.org/downloads/%{gem_name}-%{version}.gem
+Source0:       https://rubygems.org/downloads/%{gem_name}-%{version}.gem
 
 BuildRequires: ruby
 BuildRequires: ruby(release)
@@ -79,5 +78,8 @@ popd
 
 
 %changelog
+* Fri Dec 11 2015 Ilya Gradina <ilya.gradina@gmail.com> - 0.0.2-2
+- change license, delete group
+
 * Wed Dec 09 2015 Ilya Gradina <ilya.gradina@gmail.com> - 0.0.2-1
 - Initial package									
