@@ -2,7 +2,7 @@
 
 Name:          rubygem-%{gem_name}
 Version:       0.0.2
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       A pure Ruby API to the NIfTI Neuroimaging Format
 License:       LGPLv3+
 URL:           https://github.com/brainmap/%{gem_name}
@@ -21,8 +21,8 @@ BuildArch: noarch
 
 %description
 Ruby NIfTI is a pure-ruby library for handling NIfTI data in Ruby.
-NIfTI (Neuroimaging Informatics Technology Initiative) is an image format designed primarily
- for the storage and analysis of MRI & PET imaging data.
+NIfTI (Neuroimaging Informatics Technology Initiative) is an image format 
+designed primarily for the storage and analysis of MRI & PET imaging data.
 
 %package doc
 Summary: Documentation for %{name}
@@ -51,7 +51,7 @@ cp -a .%{gem_dir}/* \
 
 %check
 pushd .%{gem_instdir}
-  sed -i  "s/config.color_enabled = true/config.color = true/g"    spec/spec_helper.rb
+  sed -i "s/config.color_enabled =/config.color =/g" spec/spec_helper.rb
   rspec2 -Ilib spec
 popd
 
@@ -78,8 +78,11 @@ popd
 
 
 %changelog
+* Mon Dec 14 2015 Ilya Gradina <ilya.gradina@gmai.com> - 0.0.2-3
+- change check and description section
+
 * Fri Dec 11 2015 Ilya Gradina <ilya.gradina@gmail.com> - 0.0.2-2
 - change license, delete group
 
 * Wed Dec 09 2015 Ilya Gradina <ilya.gradina@gmail.com> - 0.0.2-1
-- Initial package									
+- Initial package
